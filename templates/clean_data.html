@@ -69,7 +69,9 @@
                 <div class="download-section">
                     <h5 class="mb-3">Your data is ready!</h5>
                     <div class="btn-group">
-                        <a href="{{ url_for('download') }}" class="btn btn-success btn-lg">
+                        <p>File Name: {{ file_name }}</p>
+
+                        <a href="{{ url_for('download', file_name=file_name) }}" class="btn btn-success btn-lg">
                             Download Cleaned Data
                         </a>
                         <a href="{{ url_for('upload_file') }}" class="btn btn-outline-primary btn-lg">
