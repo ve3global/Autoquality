@@ -305,6 +305,28 @@
             });
         }
 
+        // function updateFlaggedCells(indices) {
+        //     // Ensure indices is an array
+        //     if (!Array.isArray(indices)) {
+        //         console.error("Expected an array, but got:", indices);
+        //         return;
+        //     }
+
+        //     // Now safe to use forEach
+        //     indices.forEach(index => {
+        //         let row = document.querySelector(`#dataTable tr:nth-child(${index + 2})`);
+                
+        //         if (row) {
+        //             row.querySelectorAll('td').forEach(cell => {
+        //                 cell.classList.add('highlighted'); // Add 'highlighted' class
+        //             });
+        //         } else {
+        //             console.warn(`Row not found for index: ${index}`);
+        //         }
+        //     });
+        // }
+
+
         function updateOverallScore(score) {
             overallScore = ((parseFloat(overallScore) + score) / 2).toFixed(1);
             document.getElementById('scoreDisplay').textContent = `Quality Score: ${overallScore}%`;
