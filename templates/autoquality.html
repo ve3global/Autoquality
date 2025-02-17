@@ -275,7 +275,7 @@
                 let ruleId = rule.getAttribute('data-rule-id');
 
                 try {
-                    let response = await fetch(`/run_rule/{{ file_name }}/${ruleId}`);
+                    let response = await fetch(`/scan_rule/{{ file_name }}/${ruleId}`);
                     let data = await response.json();
 
                     rule.classList.remove('running');

@@ -88,8 +88,8 @@
 #                            tables=[df.to_html(classes='table', table_id='dataTable')], 
 #                            rules=RULES, file_name=file_name)
 
-# @app.route('/run_rule/<file_name>/<rule_id>')
-# def run_rule(file_name, rule_id):
+# @app.route('/scan_rule/<file_name>/<rule_id>')
+# def scan_rule(file_name, rule_id):
 #     file_path = os.path.join(UPLOAD_FOLDER, file_name)
 #     df = pd.read_csv(file_path)
 
@@ -108,8 +108,8 @@
 #     return jsonify({'flagged_indices': flagged_indices, 'quality_score': quality_score})
 
 
-# @app.route('/clean_data/<file_name>')
-# def clean_data(file_name):
+# @app.route('/fix_rule/<file_name>')
+# def fix_rule(file_name):
 #     file_path = os.path.join(UPLOAD_FOLDER, file_name)
 #     if not os.path.exists(file_path):
 #         return "File not found", 404
@@ -234,8 +234,8 @@
 #                            tables=[df.to_html(classes='table', table_id='dataTable')], 
 #                            rules=RULES, file_name=file_name)
 
-# @app.route('/run_rule/<file_name>/<rule_id>')
-# def run_rule(file_name, rule_id):
+# @app.route('/scan_rule/<file_name>/<rule_id>')
+# def scan_rule(file_name, rule_id):
 #     file_path = os.path.join(UPLOAD_FOLDER, file_name)
 #     df = pd.read_csv(file_path)
 
@@ -253,8 +253,8 @@
 
 #     return jsonify({'flagged_indices': flagged_indices, 'quality_score': quality_score})
 
-# @app.route('/clean_data/<file_name>')
-# def clean_data(file_name):
+# @app.route('/fix_rule/<file_name>')
+# def fix_rule(file_name):
 #     file_path = os.path.join(UPLOAD_FOLDER, file_name)
 #     if not os.path.exists(file_path):
 #         return "File not found", 404
@@ -870,8 +870,8 @@ def autoquality(file_name):
                            tables=[df.to_html(classes='table', table_id='dataTable')], 
                            rules=RULES, file_name=file_name)
 
-@app.route('/run_rule/<file_name>/<rule_id>')
-def run_rule(file_name, rule_id):
+@app.route('/scan_rule/<file_name>/<rule_id>')
+def scan_rule(file_name, rule_id):
     file_path = os.path.join(UPLOAD_FOLDER, file_name)
     df = pd.read_csv(file_path)
 
@@ -908,8 +908,8 @@ def run_rule(file_name, rule_id):
 
     return jsonify({'flagged_indices': result, 'quality_score': quality_score})
 
-# @app.route('/clean_data/<file_name>')
-# def clean_data(file_name):
+# @app.route('/fix_rule/<file_name>')
+# def fix_rule(file_name):
 #     file_path = os.path.join(UPLOAD_FOLDER, file_name)
 #     if not os.path.exists(file_path):
 #         return "File not found", 404
@@ -928,8 +928,8 @@ def run_rule(file_name, rule_id):
 #                            cleaned_rows=len(df_cleaned),
 #                            file_name=cleaned_file_name)
 
-@app.route('/clean_data/<file_name>')
-def clean_data(file_name):
+@app.route('/fix_rule/<file_name>')
+def fix_rule(file_name):
     file_path = os.path.join(UPLOAD_FOLDER, file_name)
     if not os.path.exists(file_path):
         return "File not found", 404
